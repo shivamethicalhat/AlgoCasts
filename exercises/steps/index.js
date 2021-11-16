@@ -40,21 +40,22 @@
 
 //Solution #2
 function steps(n, row = 0, str = "") {
+    //base case
     if (n === row) {
         return;
     }
-
+    // new step
     if (n === str.length) {
         console.log(str);
         return steps(n, row + 1)
     }
-
+    //logic
     if (str.length <= row) {
         str += "#"
     } else {
         str += " "
     }
-
+    //recursion 
     steps(n, row, str)
 }
 
